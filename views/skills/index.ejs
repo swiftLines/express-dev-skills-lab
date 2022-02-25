@@ -1,0 +1,15 @@
+<body>
+  <h1>Skills</h1>
+  <% if(error) { %>
+    <h2><%= error %></h2>
+  <% } %>
+  <ul>
+    <% skills.forEach(function(todo) { %>
+      <li>
+        <%= skill.skill %>
+          - 
+        <%= skill.competent ? 'competent' : 'incompetent' %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
