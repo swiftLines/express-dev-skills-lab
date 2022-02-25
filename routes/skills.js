@@ -8,6 +8,7 @@ const router = Router()
 // })
 
 router.get('/', skillsCtrl.index)
+router.get('/:id', todosCtrl.show)
 
 export {
   router
