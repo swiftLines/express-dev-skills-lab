@@ -20,5 +20,6 @@ function show(req, res) {
 }
 
 export {
-  index
+  index,
+  show
 }

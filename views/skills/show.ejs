@@ -4,22 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Express Skills</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-  <h1>Skills</h1>
+  <h1>Skill</h1>
   <% if(error) { %>
     <h2><%= error %></h2>
+  <% } else { %>
+    <h2>Skill #<%= skill._id %></h2>
+    <h3><%= skill.skill %></h3>
+    <p>Complete: <%= skill.competent ? 'Yes' : 'No' %></p>
   <% } %>
-  <ul>
-    <% skills.forEach(function(skill) { %>
-      <li>
-        <a href="/skills/<%= skills._id %>"><%= skills.skill %></a>
-          - 
-        <%= skill.competent ? 'competent' : 'incompetent' %>
-      </li>
-    <% }) %>
-  </ul>
+	<a href="/skills">Go back</a>
 </body>
 </html>
