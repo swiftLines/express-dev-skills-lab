@@ -1,7 +1,7 @@
 const skills = [
-  {skill: 'Typing', competent: false, _id: 125223},
-  {skill: 'Logic', competent: true, _id: 127904},
-  {skill: 'Pseudocode', competent: true, _id: 139608},
+  {power: 'Typing', competent: false, _id: 125223},
+  {power: 'Logic', competent: true, _id: 127904},
+  {power: 'Pseudocode', competent: true, _id: 139608},
 ]
 
 const find = (conditions, callback) => {

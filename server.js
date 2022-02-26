@@ -18,7 +18,13 @@ app.set(
 )
 app.set('view engine', 'ejs')
 
+
 // middleware
+app.use(function(req, res, next) {
+  console.log('Hello SEI!')
+  req.time = new Date().toLocaleTimeString()
+  next()
+})
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -29,11 +35,6 @@ app.use(
 )
 
 // mounted routers
-
-// app.get('/', function(req, res) {
-//   res.redirect('/home')
-// })
-
 app.use('/', indexRouter)
 app.use('/skills', skillsRouter)
 

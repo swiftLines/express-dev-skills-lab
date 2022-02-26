@@ -8,18 +8,19 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-  <h1>Skills</h1>
+  <h1>Skills as of <%= time %></h1>
   <% if(error) { %>
     <h2><%= error %></h2>
   <% } %>
   <ul>
     <% skills.forEach(function(skill) { %>
       <li>
-        <a href="/skills/<%= skills._id %>"><%= skills.skill %></a>
+        <a href="/skills/<%= skill._id %>"><%= skill.power %></a>
           - 
         <%= skill.competent ? 'competent' : 'incompetent' %>
       </li>
     <% }) %>
   </ul>
+  <a href="/skills/new">Add Skills</a>
 </body>
 </html>
