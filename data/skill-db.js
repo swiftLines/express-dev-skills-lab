@@ -31,7 +31,18 @@ const findById = (id, callback) =>{
   }
 }
 
+function create(skill, callback) {
+  //Add the id
+  skill._id = Date.now() % 1000000
+  //New skill wouldnt be competent
+  skill.competent = false
+  skills.push(skill)
+  return callback(null, skill)
+}
+
+
 export { 
 	find,
-  findById
+  findById,
+  create
 }

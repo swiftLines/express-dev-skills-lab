@@ -24,9 +24,17 @@ function show(req, res) {
   })
 }
 
+function create(req, res) {
+  console.log(req.body)
+  skillDb.create(req.body, function(error, skill) {
+    res.redirect('/skills')
+  })
+}
+
 
 export {
   index,
   newSkill as new,
-  show
+  show,
+  create
 }
